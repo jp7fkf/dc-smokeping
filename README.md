@@ -1,12 +1,13 @@
-# smokeping using docker-compose
+# smokeping using docker compose
 
 ## systemctl compose
 ```
-cp smokeping.service /etc/systemd/system/smokeping.service
+vim dc-smokeping.service # optional (ex. path to workingdir)
+sudo ln -s /home/composer/dc-smokeping.service /etc/systemd/system/
 cp docker-compose.yml docker-compose.override.yml # optional
 sudo systemctl daemon-reload
-sudo systemctl status smokeping-service
-sudo systemctl [start/stop/restart] smokeping-service
+sudo systemctl status dc-smokeping.service
+sudo systemctl [start/stop/restart] dc-smokeping.service
 ```
 
 ## References
